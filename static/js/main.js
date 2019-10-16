@@ -27,7 +27,7 @@ $jq(function() {
             }
 
             $jq("div.choice").removeAttr('hidden');
-            $jq.post("https://nameless-retreat-24522.herokuapp.com/question", JSON.stringify({"answer": sentObj}), function( data ) {
+            $jq.post("question", JSON.stringify({"answer": sentObj}), function( data ) {
                 $jq("h2#question").html(data.question)
                 $jq(".btn-lg").html(data.button);
                 if(data.button == "Restart") {

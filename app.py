@@ -4,8 +4,8 @@ from clips import Environment
 # Define the clips environment
 clips = Environment()
 
-# Load the Network Expert System
-clips.load("newNetwork.clp")
+# Load the Project Expert System
+clips.load("project.clp")
 
 # Define the app of web server
 app = Flask(__name__)
@@ -76,4 +76,4 @@ def reset():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run()
